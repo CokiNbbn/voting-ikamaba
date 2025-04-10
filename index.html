@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pemilihan Ketua IKAMABA</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body class="bg-light">
+		<div class="container">
+			<h1 class="text-center mb-5 fw-bold">
+				Penghitungan Suara Calon Ketua IKAMABA 2024/2025
+			</h1>
+
+			<div class="container mb-3">
+				<div class="row gap-5">
+					<div class="col card pb-3 text-center">
+						<p>Jumlah pemilih</p>
+						<input
+							type="number"
+							id="jumlahPemilih"
+							class="form-control fw-bold text-center"
+						/>
+					</div>
+					<div class="col card text-center">
+						<p>Jumlah suara masuk</p>
+						<h1 id="jumlahSuaraMasuk" class="fw-bold">0</h1>
+					</div>
+					<div class="col card text-center">
+						<p>Persentase suara masuk</p>
+						<h1 id="persentaseSuaraMasuk" class="fw-bold">0%</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- Calon 1 -->
+				<div class="col-md-6 mb-4">
+					<div class="card p-5 d-flex flex-column align-items-center">
+						<div
+							class="d-flex align-items-center col-md-6 justify-content-center gap-3 mb-3"
+						>
+							<button
+								class="btn btn-outline-danger my-2"
+								onclick="kurangSuara(1)"
+							>
+								-1
+							</button>
+							<img
+								src="images/calon1.jpg"
+								class="candidate-img"
+								id="foto1"
+								alt="Foto Calon 1"
+							/>
+							<button
+								class="btn btn-primary my-2"
+								onclick="tambahSuara(1)"
+							>
+								+1
+							</button>
+							<div class="ms-5">
+								<div class="p-2 bg-warning mb-3 rounded">
+									<p>Suara</p>
+									<h2 id="suara1">0</h2>
+								</div>
+								<div class="p-2 bg-warning rounded">
+									<p>Persentase</p>
+									<h2 id="persen1">0%</h2>
+								</div>
+							</div>
+						</div>
+						<label for="namaCalon1" class="form-label fw-bold"
+							>No. Urut 1</label
+						>
+						<input
+							type="text"
+							id="namaCalon1"
+							class="form-control"
+						/>
+
+						<div class="card w-100 p-2 mt-4">
+							<div class="tally w-100" id="tally1"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Calon 2 -->
+				<div class="col-md-6 mb-4">
+					<div class="card p-5 d-flex flex-column align-items-center">
+						<div
+							class="d-flex align-items-center col-md-6 justify-content-center gap-3 mb-3"
+						>
+							<button
+								class="btn btn-outline-danger my-2"
+								onclick="kurangSuara(2)"
+							>
+								-1
+							</button>
+							<img
+								src="images/calon2.jpg"
+								class="candidate-img"
+								id="foto2"
+								alt="Foto Calon 2"
+							/>
+							<button
+								class="btn btn-primary my-2"
+								onclick="tambahSuara(2)"
+							>
+								+1
+							</button>
+							<div class="ms-5">
+								<div class="p-2 bg-warning mb-3 rounded">
+									<p>Suara</p>
+									<h2 id="suara2">0</h2>
+								</div>
+								<div class="p-2 bg-warning rounded">
+									<p>Persentase</p>
+									<h2 id="persen2">0%</h2>
+								</div>
+							</div>
+
+						</div>
+						<label for="namaCalon2" class="form-label fw-bold"
+							>No. Urut 2</label
+						>
+						<input
+							type="text"
+							id="namaCalon2"
+							class="form-control"
+						/>
+						<div class="card w-100 p-2 mt-4">
+							<div class="tally w-100" id="tally2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
